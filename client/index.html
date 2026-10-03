@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runtime Shell</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="shell">
+        <header class="window-bar">
+          <div class="window-controls">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="window-title">runtime-shell</div>
+          <div class="window-actions">
+            <button>Run</button>
+            <button class="primary">Deploy</button>
+          </div>
+        </header>
+
+        <aside class="sidebar">
+          <div class="brand">
+            <div class="brand-mark">R</div>
+            <div>
+              <h1>Runtime</h1>
+              <p>Viewport Shell</p>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <button class="nav-item active">Overview</button>
+            <button class="nav-item">Assets</button>
+            <button class="nav-item">Modules</button>
+            <button class="nav-item">Animations</button>
+            <button class="nav-item">Runtime</button>
+          </nav>
+
+          <div class="status-panel">
+            <span class="status-label">State</span>
+            <strong>Idle / Ready</strong>
+          </div>
+        </aside>
+
+        <main class="workspace">
+          <div class="toolbar">
+            <div class="tab-group">
+              <span class="tab active">Scene</span>
+              <span class="tab">Layout</span>
+              <span class="tab">Forge</span>
+            </div>
+            <div class="toolbar-actions">
+              <button>Reset</button>
+              <button class="primary">Launch</button>
+            </div>
+          </div>
+
+          <section class="viewport-panel">
+            <div id="viewport"></div>
+            <div class="floating-hud">
+              <div class="hud-card">
+                <span class="label">Root</span>
+                <strong>Runtime Engine</strong>
+              </div>
+              <div class="hud-card accent">
+                <span class="label">Mode</span>
+                <strong>Interactive</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="tile-grid">
+            <button class="tile active" data-scene="orbit">
+              <span class="tile-icon">◎</span>
+              <strong>Orbit</strong>
+              <small>scene camera</small>
+            </button>
+            <button class="tile" data-scene="pulse">
+              <span class="tile-icon">◌</span>
+              <strong>Pulse</strong>
+              <small>motion loop</small>
+            </button>
+            <button class="tile" data-scene="assembly">
+              <span class="tile-icon">▣</span>
+              <strong>Assembly</strong>
+              <small>modules</small>
+            </button>
+            <button class="tile" data-scene="render">
+              <span class="tile-icon">✦</span>
+              <strong>Render</strong>
+              <small>frame pass</small>
+            </button>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
